@@ -40,8 +40,7 @@ namespace Tempo_Vida_InjecaoAPI.Controllers
                     Scoped = _scopedService.OperationId,
                     Singleton = _singetonService.OperationId
                 },
-
-                //Somente para testar o Transient que muda a cada Instância, por isso essa nova Insância.
+                                      
                 SegundaChamada = new // Segunda Instancia
                 {
                     Transient = transientService2.OperationId,
