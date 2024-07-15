@@ -25,8 +25,7 @@ namespace Tempo_Vida_InjecaoAPI.Controllers
 
         [HttpGet("guides")]
         public IActionResult Get()
-        {
-            //Somente para testar o Transient que muda a cada Instância, por isso essa nova Insância.
+        {                   
             var transientService2 = HttpContext.RequestServices.GetRequiredService<ITransientService>();
             var scopedService2 = HttpContext.RequestServices.GetRequiredService<IScopedService>();
             var singletonService2 = HttpContext.RequestServices.GetRequiredService<ISingetonService>();
